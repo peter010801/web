@@ -3,41 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitaj v mojom kúte internetu</title>
+    <title>Moje Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-<script>
-        function openAboutWindow() {
-            var aboutWindow = window.open("", "About Me", "width=600,height=400");
-            aboutWindow.document.write(`
-                <!DOCTYPE html>
-                <html lang="sk">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>O mne</title>
-                    <link rel="stylesheet" href="styles.css">
-                </head>
-                <body>
-                    <h2>O mne</h2>
-                    <p>Toto je miesto, kde môžete písať svoj životopis alebo iné osobné informácie.</p>
-                    <p>Môžete sem vložiť akýkoľvek obsah, ktorý chcete, aby bol dostupný vo vašom novom okne.</p>
-                </body>
-                </html>
-            `);
+    <script>
+        function loadContent(section) {
+            const main = document.querySelector('main');
+            if (section === 'about') {
+                main.innerHTML = `
+                    <section id="about">
+                        <h2>O mne</h2>
+                        <p>Detailný opis vašej profesijnej kariéry, úspechy a skúsenosti.</p>
+                        <p>Toto je miesto, kde môžete písať svoj životopis alebo iné osobné informácie.</p>
+                    </section>
+                `;
+            } else if (section === 'portfolio') {
+                main.innerHTML = `
+                    <section id="portfolio">
+                        <h2>Portfólio</h2>
+                        <div class="gallery">
+                            <!-- Projekty budú tu -->
+                        </div>
+                    </section>
+                `;
+            } else if (section === 'blog') {
+                main.innerHTML = `
+                    <section id="blog">
+                        <h2>Blog</h2>
+                        <div class="articles">
+                            <!-- Zoznam článkov -->
+                        </div>
+                    </section>
+                `;
+            } else if (section === 'contact') {
+                main.innerHTML = `
+                    <section id="contact">
+                        <h2>Kontakt</h2>
+                        <form>
+                            <label for="name">Meno:</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="message">Správa:</label>
+                            <textarea id="message" name="message" required></textarea>
+                            <button type="submit">Odoslať</button>
+                        </form>
+                    </section>
+                `;
+            }
         }
     </script>
-    
 </head>
 <body>
     <header>
-        <div class="logo"> Peter Čelko services - PC.services</div>
+        <div class="logo">Moje Portfolio</div>
         <nav>
             <ul>
-                <li><a href="#about">O mne formálne</a></li>
-                <li><a href="#about">O mne neformálne</a></li>
-                <li><a href="#about">Naše služby</a></li>
-                <li><a href="#portfolio">Projekty</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="javascript:void(0);" onclick="loadContent('about')">O mne</a></li>
+                <li><a href="javascript:void(0);" onclick="loadContent('portfolio')">Portfólio</a></li>
+                <li><a href="javascript:void(0);" onclick="loadContent('blog')">Blog</a></li>
+                <li><a href="javascript:void(0);" onclick="loadContent('contact')">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -45,32 +69,7 @@
     <main>
         <section id="welcome">
             <h1>Vitajte na mojej stránke!</h1>
-            <p>Nehanbi sa pozrieť čomu všetkému sa venujem.</p>
-        </section>
-
-        <section id="about">
-            <h2>O mne</h2>
-            <p>Detailný opis vašej profesijnej kariéry, úspechy a skúsenosti.</p>
-        </section>
-
-        <section id="Moje projekty">
-            <h2>Portfólio</h2>
-            <div class="gallery">
-                <!-- Projekty budú tu -->
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <form>
-                <label for="name">Meno:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Správa:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Odoslať</button>
-            </form>
+            <p>Som profesionál v oblasti XYZ. Pozrite si moje projekty a články.</p>
         </section>
     </main>
 
