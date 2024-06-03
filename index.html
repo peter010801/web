@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitaj v mojom kúte internetu</title>
     <link rel="stylesheet" href="styles.css">
+<script>
+        function openAboutWindow() {
+            var aboutWindow = window.open("", "About Me", "width=600,height=400");
+            aboutWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="sk">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>O mne</title>
+                    <link rel="stylesheet" href="styles.css">
+                </head>
+                <body>
+                    <h2>O mne</h2>
+                    <p>Toto je miesto, kde môžete písať svoj životopis alebo iné osobné informácie.</p>
+                    <p>Môžete sem vložiť akýkoľvek obsah, ktorý chcete, aby bol dostupný vo vašom novom okne.</p>
+                </body>
+                </html>
+            `);
+        }
+    </script>
+    
 </head>
 <body>
     <header>
