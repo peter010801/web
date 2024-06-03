@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Portfolio</title>
+    <title>Moje O mne trochu inak</title>
     <link rel="stylesheet" href="styles.css">
     <script>
         function loadContent(section) {
             const main = document.querySelector('main');
-            if (section === 'about') {
+            if (section === 'O mne') {
                 main.innerHTML = `
-                    <section id="about">
+                    <section id="O mne">
                         <h2>O mne</h2>
                         <p>Detailný opis vašej profesijnej kariéry, úspechy a skúsenosti.</p>
                         <p>Toto je miesto, kde môžete písať svoj životopis alebo iné osobné informácie.</p>
                     </section>
                 `;
-            } else if (section === 'portfolio') {
+            } else if (section === 'O mne trochu inak') {
                 main.innerHTML = `
-                    <section id="portfolio">
+                    <section id="O mne trochu inak">
                         <h2>Portfólio</h2>
                         <div class="gallery">
                             <!-- Projekty budú tu -->
                         </div>
                     </section>
                 `;
-            } else if (section === 'blog') {
+            } else if (section === 'Moje projekty') {
                 main.innerHTML = `
-                    <section id="blog">
-                        <h2>Blog</h2>
+                    <section id="Moje projekty">
+                        <h2>Moje projekty</h2>
                         <div class="articles">
                             <!-- Zoznam článkov -->
                         </div>
                     </section>
                 `;
-            } else if (section === 'contact') {
+            } else if (section === 'Kontakt') {
                 main.innerHTML = `
-                    <section id="contact">
+                    <section id="Kontakt">
                         <h2>Kontakt</h2>
                         <form>
                             <label for="name">Meno:</label>
@@ -55,13 +55,13 @@
 </head>
 <body>
     <header>
-        <div class="logo">Moje Portfolio</div>
+        <div class="logo">Moje O mne trochu inak</div>
         <nav>
             <ul>
-                <li><a href="javascript:void(0);" onclick="loadContent('about')">O mne</a></li>
-                <li><a href="javascript:void(0);" onclick="loadContent('portfolio')">Portfólio</a></li>
-                <li><a href="javascript:void(0);" onclick="loadContent('blog')">Blog</a></li>
-                <li><a href="javascript:void(0);" onclick="loadContent('contact')">Kontakt</a></li>
+                <li><a href="javascript:void(0);" onclick="loadContent('O mne')">O mne</a></li>
+                <li><a href="javascript:void(0);" onclick="loadContent('Moje projekty')">Moje projekty</a></li>
+                <li><a href="javascript:void(0);" onclick="loadContent('O mne trochu inak')">Portfólio</a></li>
+                <li><a href="javascript:void(0);" onclick="loadContent('Kontakt')">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -77,7 +77,7 @@
         <div class="social-media">
             <!-- Odkazy na sociálne siete -->
         </div>
-        <p>&copy; 2024 Moje Portfolio</p>
+        <p>&copy; 2024 Moje O mne trochu inak</p>
     </footer>
 </body>
 </html>
